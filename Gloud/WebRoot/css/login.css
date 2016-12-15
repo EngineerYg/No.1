@@ -1,0 +1,56 @@
+@charset "utf-8";
+/*登录注册*/
+/*
+ * headerAfooter.css---5 width heigth
+ * 
+ */
+.user_login_card{width:300px;  border:1px solid #454545; background:#151515; padding:0; margin:30px auto; clear:both; color:#9c9c9c;}
+.user_login_card:after{position:absolute;content:''; left:1px; top:1px; right:1px; bottom:1px; border:1px solid #4a4a4a; z-index:-10}
+.user_login_card:before{position:absolute;content:''; z-index:20; right:48px; top:-5px; background:url(../images/sj_up.png) no-repeat; width:10px; height:7px}
+.user_login_cont{ padding:18.7px}
+.user_tab_items{ line-height:40px; clear:both; overflow: hidden; height:40px; border-bottom:1px solid #494949; text-align:center}
+.user_tab_items li{ float:left; width:50%; border-bottom:2px solid #151515; cursor:pointer; line-height:38px}
+.user_tab_items li:hover,.user_tab_items li.on{border-bottom:2px solid #25943a}
+
+
+.page_reg_info{ clear:both; position:relative}
+.user_login_cont .h_reg_list{ float:left; width:264px;background:#000; padding:1px;height:35.6px; line-height:35.6px; margin-bottom:28px}
+.user_login_cont .h_reg_list.w_132{ width:132px;}
+.user_login_cont .h_reg_list_m{border:1px solid #4a4a4a;padding:0 10px; height:36px;}
+.user_login_cont .h_reg_list_m:hover{ border:1px solid #25943a}
+.page_reg_info .h_reg_tips{line-height:30px;left:11px; top:40px;}
+.user_login_cont .h_reg_xy{ padding:0 11px; font-size:12px;}
+.user_login_cont .h_reg_btn,.user_login_cont a.h_reg_btn,.user_login_cont .h_login_btn,.user_login_cont a.h_login_btn{ height:36px; line-height:36px; margin-bottom:10px; border-radius:5px; }
+.user_login_cont .h_login_btn,.user_login_cont a.h_login_btn{ margin:10px 0 12px}
+
+.user_login_cont .h_reg_xy input{ vertical-align:-2px}
+.user_login_cont .h_reg_code{width:120px; height:38px; line-height:38px;border:1px solid #25943a; border-radius:4px;}
+
+/*协议*/
+.agreement_card{ clear:both; color:#9c9c9c; line-height:20px}
+.agreement_card p{ text-indent:2em; padding:4px 0}
+/** 用户协议弹出层样式**/
+.xw_user_agreement{background: #000 none repeat scroll 0 0;
+    border: 1px solid #000;
+    font-size: 12px;
+    color:#ddd;
+    right: 0;
+    padding: 8px;
+    position: absolute;
+    bottom:35px;
+    width: 470px;
+    line-height:3px;
+    z-index: 9999;
+    display:none;
+}
+
+
+/*忘记密码界面start*/
+#user_login_card_forget{
+	margin:15px auto;
+}
+.user_tab_forget { line-height:35px; clear:both; overflow: hidden; height:36px; border-bottom:1px solid #494949; text-align:center}
+.user_tab_forget li{ border-bottom:2px solid #151515; cursor:pointer; line-height:33px}
+.user_tab_forget li:hover,.user_tab_items li.on{border-bottom: 2px solid #25943A}
+
+/*忘记密码界面end*/

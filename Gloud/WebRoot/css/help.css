@@ -1,0 +1,48 @@
+/** 帮助界面 css**/
+.help_card{clear:both; overflow:hidden; margin-bottom:14px;}
+.help_info{float:right; width:594px; height:445px;background:#151515; border-bottom:1px solid #25943a; padding:10px 12px}
+.help_tips{border-left:3px solid #25943a; color:#25943a; height:28px;line-height:24px; font-size:14px; font-weight: normal; padding-left:10px; margin-bottom:12px}
+.help_right_title{float:right;}
+.help_font_height{height:243px; overflow:auto;}
+.help_font_div_p{margin-bottom:10px; /*text-indent:0.3rem;letter-spacing:0.005rem;*/}
+.help_font_div_title{margin-bottom:10px; /*text-indent:0.3rem;*/ color:#25963a; font-size: 13px; font-weight: 600;}
+.help_font_div_stitle{margin-bottom:6px; /*text-indent:0.3rem;*/ color:#25963a; font-size: 13px; }
+.help_right_title_img{height:23px;}
+.help_left_div{float:left; width:596px;}
+.help_left_card{float:left; width:284px; height:208px; border-bottom:1px solid #25943a; margin-right:18px;background:#151515; padding:10px 12px}
+.help_left_card.num_top{margin-bottom:30px}
+.help_left_card.num_even{ margin-right:0px}
+.help_font_div{font-size:12px;color:#999999; padding-top:9px; }
+.help_btn_div_pos{margin-bottom:10px;}
+.help_btn_div{width:100%;height:30px; border:1px  solid #25963a;color:#25963a;text-align:center; line-height:30px; border-radius:4px; margin-top:20px;cursor:pointer}
+a.help_btn_a{color:#25963a;display: block;}
+a.help_btn_a:hover{color:#fff;}
+.help_font_div_span{color:#888;}
+.help_btn_div:hover{background: #25963a;color:#fff;}
+.help_left_card:hover{border-bottom: 2px solid #00FF33;}
+.help_info:hover{border-bottom: 2px solid #00FF33;}
+.user_list{ clear:both;background:#000; padding:1px;height:35.6px; line-height:35.6px;}
+.user_list_m{border:1px solid #4a4a4a;padding:0 9px; clear:both; height:33px; background:#2a2a2a }
+.user_list_m:hover{border:2px solid #25943a}
+a.user_eidt{display:block;height:35.6px; line-height:35.6px;text-align:center; border:1px solid #25943a; border-radius:4px;color:#25943a; min-width:84px}
+
+
+.hehe_help_a{color: #999; border-bottom: 1px solid;}
+.hehe_help_a:hover{color:#25963a;}
+.user_list{background: #151515;}
+/*按钮*/
+.help_list_nav{width:116px;height:29.45px; border:1px  solid #23aa37;color:#23aa37;text-align:center; line-height:28px; border-radius:3.75px; cursor:pointer; display:block}
+.help_list_nav_item_2{ clear:both;color:#23aa37; overflow:hidden; margin:28px 0px 0px}
+.help_list_info_area{ clear:both;width:262.35px;background:#000; padding:1px;height:60px; line-height:20px; margin-bottom:18px}
+.help_list_info_m_area{border:1px solid #4a4a4a;padding:0 1px; clear:both; height:57.55; background:#2a2a2a ;}
+/*建议内容*/
+.help_list_info_m_area .help_list_info_input_t{ border:none; width:100%; background:none; height:57.55px}
+/*联系方式*/
+.help_list_info{ float:left; width:159.2px;background:#000; padding:1px;height:30px; line-height:29px; margin-bottom:28px}
+.help_list_info_m{border:1px solid #4a4a4a;padding:0 1px; clear:both; height:28px; background:#2a2a2a }
+.page_reg_info .help_list_code{ height:35px; line-height:35px}
+.help_list_code{ float:right;width:94px; height:35px; line-height:35px;display:inline; text-align:center; border:1px solid #25943a; border-radius:4px;color:#25943a;}
+.help_m_info{overflow:auto; color:#23aa37;font-size: 14px; line-height:24px; margin-left:5px;}
+
+.help_list_nav_item li{ float:left; width:188.6px; padding:0px 13px 13px 0;-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+.help_list_nav_item li a{ float:left; width:175px;  }

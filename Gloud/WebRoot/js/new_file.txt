@@ -1,0 +1,217 @@
+<header class="header_card">
+	<a href="#" title="格来云游戏" class="header_logo">格来云游戏</a>
+
+	<div class="header_info">
+
+		<div class="header_info_nav">
+			<!-- <div style="margin-right: 100px; margin-top: 4px;"
+				class="header_info_nav_list">
+				<a href="#"><img style=""
+					src="http://s2.gloud.cn/web//images/activity_one_html.png" alt='activity_one_html'></a>
+			</div> -->
+			<div class="header_info_nav_list">
+				<a href="#" title="登录" class="info_nav" id="j_login">登录</a>
+				<!-- 登录弹出层 -->
+				<form name="form_login" id="form_login" method="post" action="/index.php/user/loginto.html">
+					<div class="h_login_card j_float" style="display: none" id="j_login_f">
+						<div class="h_reg_info">
+							<div class="h_reg_list">
+								<p class="h_reg_list_m">
+									<input class="h_reg_input_t" id="username" name="username" placeholder="邮箱号/手机号/ID" type="text">
+								</p>
+								<p style="display: none;" class="h_reg_tips" id="log_username_error_message"></p>
+							</div>
+
+						</div>
+						<div class="h_reg_info">
+							<div class="h_reg_list">
+								<p class="h_reg_list_m">
+									<input class="h_reg_input_t" id="password" name="password" placeholder="请输入密码" type="password">
+								</p>
+								<p style="display: none;" class="h_reg_tips" id="log_password_error_message"></p>
+							</div>
+
+						</div>
+						<!-- 图形验证码 -->
+						<div class="h_reg_info" id="checkcode_div" style="display:none">
+							<div class="h_reg_list h_reg_50">
+								<p class="h_reg_list_m" id="checkcode_p">
+									<input class="h_reg_input_t" id="login_verify_code" name="login_verify_code" placeholder="请输入验证码" type="text">
+								</p>
+							</div>
+							<div class="h_reg_checkcode">
+								<img alt="验证码" src="%E6%A0%BC%E6%9D%A5%E4%BA%91%E6%B8%B8%E6%88%8F-%E5%AE%98%E7%BD%91-%E4%BA%91%E7%AB%AF%E8%B6%85%E7%BA%A7%E6%B8%B8%E6%88%8F%E6%9C%BA-%E5%8A%A8%E8%A7%86%E4%BA%91%E7%A7%91%E6%8A%80_files/create_verify_code.png" title="点击刷新" height="100%" width="100%">
+							</div>
+							<p class="h_reg_tips" id="log_checkcode_error_messages"></p>
+						</div>
+						<!-- 图形验证码end -->
+						<p class="h_reg_xy">
+							<span class="fl"> <input name="rememberme" checked="checked" type="checkbox"> 自动登录
+							</span> <span class="fr"><a href="#" title="忘记密码">忘记密码？</a></span>
+						</p>
+						<input value="1" name="dosubmit" type="hidden"> <input id="login_real_password" value="" name="login_real_password" type="hidden"> <a href="#" class="h_login_btn" title="登录" id="click_login">登录</a>
+					</div>
+				</form>
+			</div>
+			<div class="header_info_nav_list">
+				<a href="#" title="注册" class="info_nav" id="j_regist">注册</a>
+				<!-- 注册弹出层 -->
+				<form name="form_reg" id="form_reg" method="post" action="/index.php/user/regto.html">
+					<div class="h_reg_card" style="display: none" id="j_regist_f">
+						<div class="h_reg_info">
+							<div class="h_reg_list">
+								<p class="h_reg_list_m">
+									<input class="h_reg_input_t" id="username" name="username" placeholder="邮箱号/手机号" type="text">
+								</p>
+								<p style="display: none;" class="h_reg_tips" id="reg_username_error_message"></p>
+							</div>
+
+						</div>
+						<!-- 图形验证码 -->
+						<div class="h_reg_info" id="reg_checkcode_div">
+							<div class="h_reg_list h_reg_50">
+								<p class="h_reg_list_m" id="checkcode_p">
+									<input class="h_reg_input_t" id="reg_verify_code" name="reg_verify_code" placeholder="请输入验证码" type="text">
+								</p>
+							</div>
+							<div class="h_reg_checkcode">
+								<img alt="验证码" src="%E6%A0%BC%E6%9D%A5%E4%BA%91%E6%B8%B8%E6%88%8F-%E5%AE%98%E7%BD%91-%E4%BA%91%E7%AB%AF%E8%B6%85%E7%BA%A7%E6%B8%B8%E6%88%8F%E6%9C%BA-%E5%8A%A8%E8%A7%86%E4%BA%91%E7%A7%91%E6%8A%80_files/create_verify_code.png" title="点击刷新" height="100%" width="100%">
+							</div>
+							<p class="h_reg_tips" id="reg_checkcode_error_messages"></p>
+						</div>
+						<!-- 图形验证码end -->
+						<div class="h_reg_info">
+							<div class="h_reg_list w_132">
+								<p class="h_reg_list_m">
+									<input class="h_reg_input_t" id="verifycode" name="verify_code" placeholder="验证码" type="text">
+								</p>
+							</div>
+							<a href="#" title="发送验证码" id="get_verify_code" class="h_reg_code">发送验证码</a>
+
+							<p style="display: none;" class="h_reg_tips" id="reg_verify_code_message">sd</p>
+
+						</div>
+						<div class="h_reg_info">
+							<div class="h_reg_list">
+								<p class="h_reg_list_m">
+									<input class="h_reg_input_t" name="password" id="password" placeholder="请输入密码" type="password">
+								</p>
+								<p style="display: none;" class="h_reg_tips" id="reg_password_error_message"></p>
+							</div>
+
+						</div>
+						<div class="h_reg_info">
+							<div class="h_reg_list">
+								<p class="h_reg_list_m">
+									<input class="h_reg_input_t" name="repeat_password" id="repeat_password" placeholder="重复密码" type="password">
+								</p>
+								<p style="display: none;" class="h_reg_tips" id="reg_repeat_password_error_message"></p>
+							</div>
+
+						</div>
+						<input value="1" name="dosubmit" type="hidden"> <input id="reg_real_password" value="" name="reg_real_password" type="hidden"> <a href="#" class="h_reg_btn" id="click_reg" title="注册">注册</a>
+
+						<p class="h_reg_xy">
+							<input checked="checked" type="checkbox"> 同意<a href="#" target="_blank">《用户协议》</a>
+						</p>
+					</div>
+				</form>
+			</div>
+			<div class="header_info_nav_list">
+				<a href="#" title="帮助" class="info_nav">帮助</a>
+			</div>
+		</div>
+	</div>
+</header>   
+
+
+
+
+
+
+
+记录 表
+
+
+id userId 	gameId payTime 到期时间
+
+
+select * from Game where gameId in (select gameId from jl where userid =?)
+
+
+<li>
+                        <a href="GameInfo">
+                            <img src="gameImages/41.jpg" alt="标题图片">
+
+                            <div class="games_slide_cover" style="display: none;">
+                                <h3>刺客信条：启示录</h3>
+                            </div>
+                        </a>
+                    </li><li>
+                        <a href="GameInfo">
+                            <img src="gameImages/41.jpg" alt="标题图片">
+
+                            <div class="games_slide_cover" style="display: none;">
+                                <h3>刺客信条：兄弟会</h3>
+                            </div>
+                        </a>
+                    </li><li>
+                        <a href="GameInfo">
+                            <img src="gameImages/41.jpg" alt="标题图片">
+
+                            <div class="games_slide_cover" style="display:none">
+                                <h3>刺客信条3</h3>
+                            </div>
+                        </a>
+                    </li><li>
+                        <a href="http://www.gloud.cn/index.php/game/gameinfo/gameid/121.html">
+                            <img src="gameImages/41.jpg" alt="标题图片">
+
+                            <div class="games_slide_cover" style="display:none">
+                                <h3>刺客信条：自由呐喊</h3>
+                            </div>
+                        </a>
+                    </li><li>
+                        <a href="GameInfo">
+                            <img src="gameImages/f6f1f2512a3b24ebe88d5c1243acb8ed.jpg" alt="标题图片">
+
+                            <div class="games_slide_cover" style="display:none">
+                                <h3>刺客信条4：黑旗</h3>
+                            </div>
+                        </a>
+                    </li>
+
+
+
+
+
+
+ id zhichi
+1	YB
+2	GB
+
+<span onclick="buy_game_save(350,1190, '存档-孤岛惊魂3双结局', -1)">
+							<div class="xw_8_save_items ">
+								<div class="xw_8_save_tips2">
+									<h4>
+										<span>存档-孤岛惊魂3双结局</span>
+									</h4>
+			
+									<p>G币:1190</p>
+								</div>
+								<div class="xw_8_save_items_t">
+									<h3>孤岛惊魂3双结局存档</h3>
+			
+									<p>双结局存档，女王还是女友</p>
+								</div>
+							</div>
+						</span>	
+
+
+
+
+
+
+href="[^"]*"
+
+

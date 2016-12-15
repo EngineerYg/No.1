@@ -1,0 +1,39 @@
+/*轮播图1*/
+.novice_slide{ cursor: pointer; width:644px; border:1px solid #020202; height:358px; float: left; overflow: hidden; position: relative; margin-right: 11px}
+.novice_slide .item{ position: relative;}
+.novice_slide img{width:644px;height:358px}
+.novice_slide .text_bg{ position: absolute; bottom:0; left:0; width:100%; height:110px;background: -webkit-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,1) 100%); background: -moz-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,1) 100%); background: -ms-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,1) 100%);}
+.novice_slide .title{ margin-left:14px; margin-top:42px; color:#fff; font-size:22px; line-height:32px;}
+.novice_slide .bref{ font-size:14px; color:#ccc; line-height:24px; margin-left:14px;}
+.novice_slide .expire{ font-size:16px; color:#fff; padding-left:20px;}
+.novice_slide .change{ transition: right ease 0.5s;-moz-transition: right ease 0.5s;-webkit-transition: right ease 0.5s;-ms-transition: right ease 0.5s;width:160px;  height:159px; position: absolute; right:-154px; top:5px; background:rgba(0,0,0,0.45);}
+.novice_slide .change li{ cursor: pointer; font-size:14px; color:#ccc; height:6px; line-height:60px; text-align: center; width:100%;}
+.novice_slide .change li.active{ color:#fff;position:relative;}
+.novice_slide .change li.active:before{ position: absolute; left: 0; top:0; content:''; height:100%; width:6px; background:#23aa37;}
+.novice_slide:hover .change{right:0;}
+
+
+/*轮播图2*/
+.novice_scroll{width:314px; border:1px solid #020202; height:358px;float: right; overflow: hidden; position: relative;}
+.novice_scroll img{width:314px; height:358px;}
+.novice_scroll .change{width:100%; position: absolute; text-align: center; bottom:6px; }
+.novice_scroll .change ul{display: inline-block;background:rgba(0,0,0,0.45);padding:4px; border-radius:16px; font-size:0;}
+.novice_scroll .change li{ width:8px; display: inline-block; height:8px; background:#888; border-radius:50%; margin:0 2px;}
+.novice_scroll .change li.active{ background:#fff;}
+.novice_scroll .prev{ position:absolute; top:162px; left:5px; width:21px; height:37px; background:url(../images/ichy_104.png) no-repeat 0 0; background-size:21px auto;}
+.novice_scroll .next{ position:absolute; top:162px; right: 5px; width:21px; height:37px; background:url(../images/ichy_103.png) no-repeat 0 0; background-size:21px auto;}
+
+
+/*轮播图3*/
+.novice_swfit{width:312px; border:1px solid #000; background:#2e2e2e; height:153px;float: left; overflow: hidden; position: relative;margin-right:12px}
+.novice_swfit img{width:312px; height:151px;}
+.novice_swfit .change{ width:100%; position: absolute; text-align: center; bottom:6px; }
+.novice_swfit .change ul{ display: inline-block;background:rgba(0,0,0,0.45);padding:4px; border-radius:16px; font-size: 0;}
+.novice_swfit .change li{ width:8px ; display: inline-block; height:8px ; background:#888; border-radius:50%; margin:0 2px;}
+.novice_swfit .change li.active{ background:#fff;}
+.novice_swfit .item{ width:312px; height:151px; position:relative;}
+.novice_swfit .more_view{ position:absolute; z-index:10; top:114px; left:30px; font-size:14px; line-height:28px; height:28px; border-radius:2px; border:1px solid #ccc; color:#ccc; padding:0 8px;}
+.novice_swfit .more_view:hover{ border:1px solid #23aa37; color:#23aa37;}
+.novice_swfit .slide_count{ border:1px solid #434343;}
+.novice_swfit .prev{ position:absolute; top:56px; left: 5px; width:21px; height:37px; background:url(../images/ichy_104.png) no-repeat 0 0; background-size:21px auto;}
+.novice_swfit .next{ position:absolute; top:56px; right: 5px; width:21px; height:37px; background:url(../images/ichy_103.png) no-repeat 0 0; background-size:21px auto;}

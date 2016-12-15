@@ -1,0 +1,918 @@
+﻿/**圆形进度条start**/
+.circle {
+    width: 32px;
+    height: 32px;  
+    position: absolute;
+    border-radius: 50%;
+    background: green;
+}
+.pie_left, .pie_right {
+    width: 32px; 
+    height: 32px;
+    position: absolute;
+    top: 0;left: 0;
+}
+.left, .right {
+    display: block;
+    width:32px; 
+    height:32px;
+    background:#666666;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(0deg);
+}
+.pie_right, .right {
+    clip:rect(0,auto,auto,16px);
+}
+.pie_left, .left {
+    clip:rect(0,16px,auto,0);
+}
+.mask {
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    left: 5px;
+    top: 5px;
+    background: #333333;
+    position: absolute;
+    text-align: center;
+    line-height: 20px;
+	color:#ffffff;
+    font-size: 11px;
+}
+/**
+<div class="circle">
+    <div class="pie_left"><div class="left"></div></div>
+    <div class="pie_right"><div class="right"></div></div>
+    <div class="mask"><span>0</span>%</div>
+</div>
+js
+$(function() {
+    $('.circle').each(function(index, el) {
+        var num = $(this).find('span').text() * 3.6;
+        if (num<=180) {
+            $(this).find('.right').css('transform', "rotate(" + num + "deg)");
+        } else {
+            $(this).find('.right').css('transform', "rotate(180deg)");
+            $(this).find('.left').css('transform', "rotate(" + (num - 180) + "deg)");
+        };
+    });
+
+});
+**/
+/**圆形进度条end**/
+
+/**弹出层 css start**/
+
+.xw_top_first{
+	position: fixed; text-align:center; background:#2a2a2a;left:50%;top: 50%;width: 400px;transform: translateY(-50%);-webkit-transform: translateY(-50%); margin-left:-200px;border:1px solid #333;
+}
+.xw_h_reg_code{ float:right;width:1.200px; height:38px; line-height:38px;display:inline; text-align:center; border:01px solid #25943a; border-radius:4px;color:#25943a; }
+.xw_h_reg_code:hover{ background:#25943a; color:#fff}
+.xw_top_head{
+clear:both; position:relative;
+}
+.xw_top_head_main{
+	float:left; width:100%; background:#222222; height:53px; line-height:53px; margin-bottom:7px;  text-align:center; border:1px solid #333; border-bottom:2px solid #333;background-image: linear-gradient(to bottom, #2A2A2A, #1C1C1C);
+}
+.xw_top_head_title{
+	color:#FFFFFF;
+	font-size:20px;
+}
+.xw_top_head_close{
+	float:right; padding-right:7px; margin-top:10px; line-height: 53px; height: 53px;
+}
+.xw_top_main{
+	padding:0px 50px;
+}
+.xw_top_main_list{
+	clear:both; position:relative;
+}
+.xw_top_main_m{
+	float:left; width:100%; padding:1px;height:38px; line-height:38px; margin-bottom:30px;
+}
+.xw_top_main_m_cdn{
+	border:1px solid #4a4a4a;padding:0 10px; clear:both; height:36px; background:#2a2a2a;
+}
+.xw_top_main_m_cdn:hover{
+	border:1px solid #25943a;
+}
+.xw_top_main_m_input{
+	border:none; width:100%; background:none;color:#666666;
+}
+
+.xw_top_main_m_waring{
+	color:red; line-height:30px; position:absolute;  top:40px; z-index:10;
+}
+.xw_top_main_btn{
+	clear:both; background:#25943a;height:36px; position:relative; line-height:36px; margin-bottom:40px; border-radius:5px; text-align:center; color:#fff; border:none; display:block;
+}
+.xw_top_main_btn_a{
+    display: block;
+    color:#FFFFFF;
+}
+
+.xw_top_second{
+	position: fixed; text-align:center; background:#2a2a2a;left:50%;top: 50%;width: 500px;transform: translateY(-50%);-webkit-transform: translateY(-50%); margin-left:-200px;border:1px solid #333;
+}
+
+.xw_top_4_main{
+	padding:0px 30px;
+}
+
+.xw_top_5_main{
+padding:0px 10px 0 25px;
+}
+.xw_top_5_head_main{
+float:left; width:100%; background:#222222; height:38px; line-height:38px; margin-bottom:0px;  text-align:center; border:1px solid #333; border-bottom:2px solid #333;
+}
+.xw_top_5_dt{
+float:left; width:60px;  line-height:30px; text-align:right;margin-top:015px;padding-right:25px;
+}
+.xw_top_5_main_m_div dt img{filter:brightness(50%);border:.0200px solid ;border-color: transparent;}
+.xw_top_5_main_m_div dt.on img{filter:brightness(100%);	border-radius:50%;border:.0200px solid #25963a;}
+
+
+.xw_top_5_img{
+width:58px; height:58px; border-radius:50%;
+}
+
+.xw_top_5_main_m{
+height:2.200px; margin-bottom:10px; overflow-x:hidden;overflow-y:auto;float:left; width:100%; padding:1px;line-height:38px; 
+}
+
+
+.xw_top_2_main_m{
+float:left; width:100%; padding:1px; line-height:38px; margin-bottom:30px;
+}
+
+
+
+.xw_top_1_second{
+position: fixed; text-align:center; background:#2a2a2a;left:50%;top: 50%;width: 530px;transform: translateY(-50%);-webkit-transform: translateY(-50%); margin-left:-265px;border:1px solid #333;
+}
+.xw_top_1_main{
+padding:0px 20px;margin-top:40px; height:295px;overflow-x:hidden;overflow-y:auto;
+}
+.xw_top_1_head_main{
+float:left; width:100%; background:#222222; height:38px; line-height:38px;   text-align:center; border:1px solid #333; border-bottom:2px solid #333;
+}
+
+.xw_top_1_client_1.xw_top_1_client_both.on{ border:.0200px solid #25943a;background:url(../images/client_focus.png) no-repeat right top; }
+.xw_top_1_client_1{
+border:2px solid #666666; width:97.3px;height:120px; text-align:center; font-size:12px; color:#999999; float:left; margin-top:015px;
+}
+.xw_top_1_client_1:hover{
+border:2px solid #25963a; 
+
+
+}
+.xw_top_1_client_1_head{
+height:22px;
+}
+
+.xw_top_1_client_1_head_font{
+position:relative;  line-height:20px; 
+}
+.xw_top_1_client_1_2{
+ width:60px; background:#333333; margin-left:20px; height:25px; margin-top:10px; border-radius:4px; line-height:25px;
+}
+.xw_top_1_client_1_2:hover  {
+	background:#25943a;
+
+}
+
+.xw_top_1_client_1_2_font{
+color:#25936a; font-size:11px;
+}
+.xw_top_1_client_1_2_font:hover{
+	color:#FFFFFF;
+}
+.xw_top_1_client_1_3{
+height:20px;  margin-top:3px;
+}
+.xw_top_1_client_1_4{
+height:10px;  margin-top:7px;
+}
+.xw_top_1_client_1_4_font{
+position:relative;  line-height:10px;    width:80%; margin:0 auto;height:3.5px; border-radius:4px;  
+}
+.xw_top_1_client_both{
+margin-left:10px;
+}
+.xw_top_1_client_color_1{
+background: #00FF33;
+}
+.xw_top_1_client_color_2{
+background:#FF6600;
+}
+.xw_top_1_client_color_3{
+background: red;
+}
+.xw_top_1_client_btn2{
+width:80%; background:#333333; margin-left:10px; height:25px; margin-top:10px; border-radius:4px; line-height:25px;
+}
+.xw_top_1_client_btn2:hover{
+	background:#25943a;
+}
+.xw_top_1_enter_btn{float:right; margin-right:50px; width:50px; margin-top:5px;}
+.xw_top_1_enter_span{height:27px; line-height:27px;text-align:center; border:1px solid #25943a; border-radius:.0400px;color:#25943a; }
+.xw_top_1_enter_span:hover{color:#fff;background-color: #25963a;}
+.xw_top_7_main_m_waring{
+	text-align:center; color:#666666;font-size:13px;line-height:20px;
+}
+.xw_top_7_main_btn{
+left:50%; margin:0 auto;color:#25943a; margin-bottom:50px; margin-top:40px; font-size:13px; width:50px;border:1px solid #25943a; text-align:center; padding:10px 015px;
+}
+.xw_top_7_main_pad{
+padding:0px 10px;
+}
+.xw_top_7_main_m{
+height:160px; margin-bottom:10px;
+}
+.xw_top_7_main_left{
+width:2.200px;  height:160px; float:left;margin-right:10px; padding-right:10px; border-right:01px solid #ffffff;
+}
+.xw_top_7_main_left_css{
+margin-bottom:110px; color:#666666; font-size:12px; line-height:20px; text-align:left;
+}
+.xw_top_7_main_left_span{
+color:#25963a;
+}
+.xw_top_7_left_img{
+ height: 100%; margin-bottom: 0;width: 100%;
+}
+.xw_top_7_main_right{
+width:2.200px; height:160px;  float:right;
+}
+.xw_top_7_main_right_btn{
+margin:0 auto;color:#25943a; border-radius:4px; height:30px; line-height:30px;  margin-top:30px; font-size:13px; width:70px;border:1px solid #25943a; text-align:center;position:fixed;bottom:0px;
+}
+.xw_top_7_main_center_btn{display: none; clear: both;padding: 10px 50px 0; position:fied;bottom:0px;}
+.xw_top_7_font_size{font-size:13px;}
+.xw_7_speed_progress{ width:70px;height:70px;}
+.xw_7_server_pro{color:#666666; font-size:12px; line-height:20px; text-align:left;position:fixed;bottom:0px;}
+.xw_top_6_main_m{
+height:70px; line-height:50px;
+}
+.xw_top_6_main_btn{
+left:50%; margin:0 auto;color:#25943a; margin-bottom:50px; margin-top:40px; font-size:13px; width:50px;border:1px solid #25943a; text-align:center; padding:10px 015px;
+}
+.xw_top_4_main_m_add{
+height:2.200px; margin-bottom:10px;
+}
+.xw_top_4_left{
+width:180px;  height:2.200px; float:left;
+}
+.xw_top_4_left_span{
+margin-bottom:20px; color:#666666; font-size:12px;
+}
+.xw_top_4_right{
+width:260px; height:2.200px;  float:right;
+}
+.xw_top_4_right_height{
+height:30px;
+}
+.xw_top_4_right_css{
+text-align:left; margin-left:10px;font-size:13px;
+}
+.xw_top_4_right_span1{
+color:#666666;
+}
+.xw_top_4_right_span2{
+color:#ffffff;
+}
+.xw_top_4_right_span3{
+color:red;
+}
+.xw_top_4_right_height2{
+	margin-top:20px; heigth:60px;
+}
+.xw_top_4_right_css2{
+text-align:center; margin-left:10px;font-size:13px;
+}
+.xw_top_4_right_div_left{
+width:60%; color:#25963a;border:1px solid #25963a; float:left; border-radius:4px;
+}
+.xw_top_4_right_div_right{
+width:30%; color:#25963a; border:1px solid #25943a; float:right;border-radius:4px;
+}
+.xw_top_4_right_div_span1{
+ text-align:center; font-size:12px;
+}
+.xw_top_4_right_div_left:hover{
+ color:#fff;border:1px solid #25943a;  background:#25943a; 
+}
+.xw_top_4_right_div_right:hover{
+ color:#fff;border:1px solid #25943a;  background:#25943a;  float:right;border-radius:4px;
+}
+.xw_top_4_right_div_span2{
+color:#25943a; text-align:center; font-size:12px;
+}
+.xw_top_5_main_m_div{
+float:left; color:#FF0000;
+}
+.xw_top_5_div{
+float:left; width:100%; padding:01px;height:25px; line-height:25px; margin-bottom:20px; 
+}
+.xw_top_5_div_btn{
+width:60px;color:#25963a; border:1px solid #25943a;margin-left:255px; border-radius:4px;cursor:pointer;
+}
+.xw_top_5_div_span{
+ text-align:center; font-size:12px;
+}
+.xw_top_5_div_btn:hover{background-color:#25963a;color:#fff;}
+.xw_top_5_div_span:hover{color:#fff;}
+
+
+.xw_top_2_main_m_add{
+margin-bottom:10px;
+}
+.xw_top_2_p1{
+font-size:13px;
+}
+.xw_top_2_p2{
+margin-left:0px;font-size:12px;
+}
+.xw_top_2_p3{
+font-size:12px;
+}
+.xw_top_2_img1{
+width:25px; height:24px;
+}
+.xw_top_2_span1{
+color:#666666;
+}
+.xw_top_2_span2{
+color:#FFFFFF;
+}
+.xw_top_2_span3{
+color:#666666; margin-left:20px;
+}
+.xw_top_2_span4{
+color:#25943a;
+}
+.xw_top_2_div_btn_m{
+padding:0 75px 0px 50px;
+}
+.xw_top_2_div_btn_div{
+text-align:center; margin-left:10px;font-size:13px;
+}
+.xw_top_2_div_btn_div_m{
+width:100px; color:#ffffff;border:1px solid #25943a; float:left; border-radius:4px;  margin-bottom:20px; height:30px; line-height:30px;
+}
+.xw_top_2_div_btn_div_m:hover{ background:#25943a;}
+.xw_top_2_div_btn_div_m:hover .xw_top_2_div_btn_div_span #open_game_btn{
+    color:#fff
+}
+.xw_top_2_div_btn_div_m2:hover{ background:#25943a;}
+.xw_top_2_div_btn_div_m2:hover .xw_top_2_div_btn_div_span2 { color:#fff;}
+.xw_top_2_div_btn_div_span{
+color:#25943a; text-align:center; font-size:12px;
+}
+.xw_top_2_div_btn_div_m2{
+width:100px; color:#25943a; border:1px solid #25943a; float:right; border-radius:4px;margin-bottom:20px; height:30px; line-height:30px;
+}
+.xw_top_2_div_btn_div_span2{
+color:#25943a; text-align:center; font-size:12px;
+}
+
+.xw_top_1_circle_div{
+ margin-left:33px; height:25px; margin-bottom:5px; margin-top:8px; position:relative; 
+}
+.xw_top_1_desc{
+padding:30px 0 0px 18px; color:#25936a;line-height: 30px;
+}
+.xw_top_1_kps3{
+color:#FF0000;
+}
+.xw_top_1_kps2{
+color:#FF9933;
+}
+.xw_top_1_kps1{
+color:#25936a;
+}
+
+/** 购买时长 弹出层**/
+.xw_top_13_main{
+
+   text-align:left;
+}
+.xw_13_1_font{
+    font-size: 12px; color:#666666; margin-bottom:30px; font-weight: 700; padding:0px 60px;
+}
+.xw_13_1_border_test{margin-bottom:015px;}
+.xw_top_13_border{border-bottom:1px solid #666; margin-top:015px;}
+.xw_13_2_font{
+    color:#fff;
+}
+.xw_13_3_font{
+    color:#25963a;border-bottom: 01px solid #25963a;margin-left:37px;
+}
+.xw_13_btn{
+    width:60px; color:#25963a;border:1px solid #25943a;   float:right; border-radius:4px;  height:30px; line-height:30px;margin-top:-5px;color:#25963a;    text-align: center;  font-weight:400;cursor:pointer;
+}
+
+
+.xw_13_btn:hover{
+    background-color: #25963a; color:#fff;
+}
+
+
+/** 弹出层11  通知**/
+.xw_10_btn_div{
+    margin-top:30px;margin-bottom:80px;color:#25963a;width:100px; color:#25963a;border:1px solid #25943a; float:left; border-radius:4px;   height:30px; line-height:30px;
+}
+.xw_10_btn_div:hover{
+    color:#fff; background-color: #25963a;
+}
+.xw_top_10_add{
+    color:#fff;text-align: center;font-size: 13px; margin-top: 30px;
+}
+.xw_10_div{
+    padding:0px 30px 0px 30px;
+}
+.xw_10_btn_left{
+    float:left;
+}
+.xw_10_btn_right{
+    float:right;
+}
+
+
+/** 弹出层11 欢迎来到格来运游戏**/
+.xw_top_11_main{
+    line-height: 25px; color:#666666; text-align: left;  margin-top:60px;
+}
+.xw_11_btn_div{
+    color:#25963a;width:240px; color:#25963a;border:1px solid #25943a; border-radius:4px;   height:30px; line-height:30px;  margin:0 auto;
+}
+.xw_11_btn_div:hover{
+    color: #fff;background-color: #25963a;
+}
+.xw_11_btn_top{
+    margin-bottom:10px;margin-top:30px;
+}
+.xw_11_btn_bottom{
+    margin-bottom:50px;margin-top:25px;
+}
+
+
+
+/** 弹出层 12  如何进入云游戏？ **/
+.xw_12_list{
+    margin-top:80px;
+}
+.xw_12_list li{
+    border:2px solid #666666; width:57px; height:105px;  margin-right:10px;overflow: hidden; display: inline;position: relative;float: left;
+}
+.xw_12_list li.on{border:2px solid #25963a; }
+.xw_12_list li.on .help_12_span{ color:#25963a;}
+
+.xw_12_list li:hover {
+    border:2px solid #25963a; 
+}
+
+.xw_12_list li:hover .help_12_span{
+    color:#25963a;
+}
+
+.xw_12_list li:hover,li.on .h_12_1{
+    background-position: 0px -24px;
+}
+.xw_12_list li:hover,li.on .h_12_2{
+    background-position: 0px -72px;
+}
+
+.xw_12_list li:hover,li.on .h_12_3{
+    background-position: 0px -120px;
+}
+.xw_12_list li:hover,li.on .h_12_4{
+    background-position: 0px -168px;
+}
+.xw_12_list li:hover,li.on .h_12_5{
+    background-position: 0px -216px;
+}
+.xw_12_list li:hover,li.on .h_12_6{
+    background-position: 0px -264px;
+}
+.xw_12_list li:hover,li.on .h_12_7{
+    background-position: 0px -312px;
+}
+.xw_12_list li:hover,li.on .h_12_8{
+    background-position: 0px -360px;
+}
+.xw_12_head{
+    width:620px;
+}
+
+.help_12_icon{
+float: left;
+margin-top: 30px;
+margin-left:17px;
+width: 27px;
+height: 24px;
+line-height: 24px;
+overflow: hidden;
+text-indent: 999em;
+background: transparent url("../images/help_icon.png") no-repeat scroll 0% 0%;
+display:inline;
+
+}
+.xw_12_list li.help_12_icon_end{
+    margin-right:0px;
+}
+.help_12_span{
+    color:#999;margin-top: 60px; text-align: center; font-size: 12px; line-height: 015px; 
+}
+.h_12_1{
+    background-position: 0px 0px;
+}
+.h_12_2{
+    background-position: 0px -48px;
+}
+.h_12_3{
+    background-position: 0px -96px;
+}
+.h_12_4{
+    background-position: 0px -144px;
+}
+.h_12_5{
+    background-position: 0px -192px;
+}
+.h_12_6{
+    background-position: 0px -240px;
+}
+.h_12_7{
+    background-position: 0px -288px;
+}
+.h_12_8{
+    background-position: 0px -336px;
+}
+
+.xw_12_desc{
+    text-align: left;color:#666666; line-height: 20px; font-size: 12px;padding-top:130px; margin-bottom:60px;
+}
+
+/** **/
+
+.xw_8_head li{
+ float: left;
+width: 49.9%;
+line-height: 38px;
+color:#fff;
+font-size: 12px;
+border-left:01px solid #333333;
+background-image: linear-gradient(to bottom, #2A2A2A, #1C1C1C);
+}
+.xw_8_head li.on{
+background-image: linear-gradient(to bottom, #1C1C1C, #2A2A2A);
+
+}
+.xw_8_close_btn{ position:absolute; z-index:10; top:5px; right:5px;}
+.xw_top_8_main{padding:0 12px;}
+.xw_8_desc{ clear:both; overflow:hidden;
+    text-align: left; color:#666666;font-size: 11px; line-height: 20px; padding:15px 0
+}
+
+.xw_8_savecard{ position:relative; clear:both; overflow:hidden; text-align:left;margin-bottom:15px;background:url(../images/xp_l.png) repeat-x; background-size:2px auto;}
+.xw_8_save_tips{ float:left; width:106px; padding:19px 24px 0 30px; height:88px; background:url(../images/xp.png) no-repeat; background-size:cover; text-align:center; color:#fff}
+.xw_8_save_tips2{ float:left; width:106px; padding:19px 24px 0 30px; height:88px; background:url(../images/xp_pay.png) no-repeat; background-size:cover; text-align:center; color:#fff}
+.xw_8_save_tips3{ float:left; width:106px; padding:19px 24px 0 30px; height:88px; background:url(../images/xp_pay_kong.png) no-repeat; background-size:cover; text-align:center; color:#fff}
+
+.xw_8_save_tips h4{ line-height:38px; height:38px; vertical-align:middle; font-size:14px; overflow:hidden}
+.xw_8_save_tips h4 span{ display:inline-block; vertical-align:middle; line-height:1.5}
+.xw_8_save_tips p{ line-height:44px; font-size:12px}
+.xw_8_save_tips2 h4{ line-height:38px; height:38px; font-size:12px; overflow:hidden; }
+.xw_8_save_tips2 h4 span{ display:inline-block; vertical-align:middle; line-height:1.5}
+.xw_8_save_tips2 p{ line-height:44px; font-size:12px}
+
+.xw_8_save_line{ float:left; width:41px; height:107px; background:url(../images/xp_line.png) no-repeat;background-size:cover; }
+.xw_8_save_list_cont{overflow:hidden; *zoom:1; position:relative;height:107px}
+.xw_8_save_list{ position:absolute; left:0; top:0; height:107px}
+.xw_8_save_list li{ float:left; margin:0 6px;width:105px; height:107px;  text-align:center; color:#fff; cursor:pointer; position:relative}
+.xw_8_save_list li h4{ font-size:14px; line-height:30px}
+.xw_8_save_ico_p{ color:#888; font-size:12px; margin-top:-15px}
+.xw_8_savecard .game_arr.next_ico{ right:0; top:60px}
+.xw_8_savecard .game_arr.pre_ico{ left: 160px;top:60px}
+.xw_8_save_ico_1{ width:105px; height:90px; padding-top:17px; background:url(../images/xp_ico_1.png) no-repeat; background-size: 100%}
+.xw_8_save_list li.on .xw_8_save_ico_1{background:url(../images/xp_ico_1_on.png) no-repeat;background-size: 100%}
+.xw_8_save_ico_kong{ width:105px; height:107px; line-height:90px;background:url(../images/xp_ico_1_kong.png) no-repeat;background-size: 100%}
+.xw_8_save_items{ clear:both; overflow:hidden;margin:0 -12px; padding:15px 12px; border:1px dashed #666; cursor:pointer;}
+.xw_8_save_items.evenbg{ background:#242223}
+.xw_8_save_items:hover{border:1px solid #25963a;-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+.xw_8_save_items_t{ overflow:hidden; *zoom:1; padding:0 0 0 .100px; text-align:left;color:#666}
+.xw_8_save_items_t h3{ font-size:.1400px; line-height:38px; color:#fff}
+.xw_8_save_height{clear: both; line-height: 1.8;height: 140px;overflow-y: auto;}
+.xw_8_save_loading{ position:absolute; bottom:30px; left:0; right:0; text-align:center}
+.xw_8_save_loading img{ width:.200px}
+	
+/** 弹出层结束  css  end**/
+
+/** extra 额外弹出层**/
+.xw_charge_top{position: absolute; text-align:center; background:#2a2a2a; left:40%;top: 50%; height: 202px; width: 421px;transform: translateY(-50%);-webkit-transform: translateY(-50%); border:1px solid #333;}
+.xw_charge_return_info{ margin-top:40px;text-align:center; color:#fff;font-size:13px;cursor:pointer;}
+
+.xw_charge_return_btn{text-align:center; margin-left:50px;font-size:14px;}
+.xw_charge_return_btn_div{margin-top:50px;margin-bottom:20px;color:#25963a;width:100px; color:#25963a;border:1px solid #25943a; float:left; border-radius:4px;   height:30px; line-height:30px;cursor:pointer;}
+.xw_charge_return_btn_div:hover{color:#fff;background-color: #25963a;}
+
+
+/** 弹出层 手柄模拟器**/
+.xw_handle_tips{margin-top:40px;text-align:left; color:#999;font-size:12px;}
+.xw_handle_main{padding:0px 28px;}
+.xw_handle_span_desc{color:red;}
+.xw_handle_return_btn{font-size: 13px; margin-left: 80px;text-align: center;}
+
+/** 兑换规则 弹窗**/
+.xw_duihuan_tips{margin-top:77px;text-align:left; color:#fff;font-size:16px;}
+
+
+/*.xw_charge_return_btn_div{margin-top:28px;margin-bottom:28px;color:#25963a;width:140px; color:#25963a;border:1px solid #25943a; float:left; border-radius:5.5px;   height:42px; line-height:42px;}
+.xw_charge_return_btn_div:hover{color:#fff;background-color: #25963a;}*/
+
+.xw_charge_duihuan_btn_div{margin-top:28px;margin-bottom:28px;color:#25963a;width:140px; color:#25963a;border:1px solid #25943a; float:left; border-radius:5.5px;   height:42px; line-height:42px;}
+.xw_charge_duihuan_btn_div:hover{color:#fff;background-color: #25963a;}
+
+/** 用户协议弹出层样式**/
+.xw_user_agreement{
+	background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0;
+    border: 1px solid #000;
+    font-size: 12px;
+    color:#ddd;
+    right: 0;
+    padding: 8px;
+    position: absolute;
+    bottom:35px;
+    width: 470px;
+    line-height:3px;
+    z-index: 9999;
+}
+/** Gb购买VIP 界面的 左侧确定按钮**/
+.xw_gb_left_btn{cursor:pointer;width:45%; border: 1px solid #25963a;border-radius: 4px;color: #25963a; float: left;}
+.xw_gb_left_btn:hover{background:#25943a;color:#fff;};
+
+/** 请选择存档运行模式**/
+.xw_read_storage{margin-bottom:5px;  background: -webkit-linear-gradient(#2a2a2a,#1c1c1c); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(#2a2a2a,#1c1c1c); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(#2a2a2a,#1c1c1c); /* Firefox 3.6 - 15 */
+  background: linear-gradient(#2a2a2a,#1c1c1c); /* 标准的语法 */}
+.xw_read_storage_btn1{cursor:pointer;border:1px solid #25963a;margin:0 auto;color:#25963a;width:100px; border-radius:4px ;height:30px;margin-top:70px;}
+.xw_read_storage_btn1:hover{background:#25963a;color:#fff;}
+.xw_read_storage_btn11{ line-height:30px;font-size:13px;}
+.xw_read_storage_btn2{cursor:pointer; border:1px solid #25963a; margin:0 auto; color:#25963a;width:100px; border-radius:4px ;height:30px;margin-top:30px;}
+.xw_read_storage_btn2:hover{background:#25963a;color:#fff;}
+.xw_read_storage_btn22{ line-height:30px;font-size:13px;}
+
+/*充值提示*/
+.recharge_fixed{ width:480px; background:#2a2a2a; height:257px; border:1px solid #4a4a4a; position:fixed; top:50%; left:50%; margin:-126px 0 0 -243px; z-index: 10000;}
+.recharge_fixed .error_info{ height:170px; line-height:170px; text-align: center; font-size:14px; color:#fff;}
+.recharge_fixed .sure_btn{font-size:14px; width:110px; height:38px; line-height:38px; text-align: center; border:1px solid #23aa37; color:#23aa37; border-radius:3px; display: block; margin:0 auto; }
+.recharge_fixed .sure_btn:hover{ background:#23aa37; color:#fff}
+.recharge_fixed .close_btn{ width:16px; height:15px; background:url(../images/ichy_55.png) no-repeat 0 0; background-size:16px 15px; position:absolute; top:14px; right:14px;}
+.recharge_fixed .succ_info{ text-align: center; padding:50px 0px 0px 20px;}
+.recharge_fixed .succ_info span{ font-size:14px; color:#23aa37; line-height:26px; padding-left:35px; background:url(../images/ichy_56.png) no-repeat left center; display: inline-block;}
+.recharge_fixed li{ font-size:14px; line-height:20px; color:#fff; padding-left:124px;} 
+.recharge_fixed ul{ padding-bottom:20px; }
+
+
+/*购买游戏弹窗*/
+.buyplay_fixed{ width:481; height:256px; background:#2a2a2a; border:1px solid #4a4a4a; position: fixed; top:50%; left:50%; margin:-136px 0 0 -256px;z-index: 10000;}
+.buyplay_fixed .tab_nav{ overflow: hidden; border-bottom:1px solid #4a4a4a;}
+.buyplay_fixed .tab_nav li{ cursor:pointer; background:url(../images/ichy_58.png) no-repeat 0 0; background-size:100% auto; float:left; font-size:14px; color:#fff; width:239.6px; height:37.5px; line-height:37.5px; text-align: center;}
+.buyplay_fixed .tab_nav li:nth-child(1){ border-right:1px solid #4a4a4a}
+.buyplay_fixed .tab_nav li.active{  background:url(../images/ichy_57.png) no-repeat 0 0; background-size:100% auto;}
+.buyplay_fixed .bill_count{ width:478px; margin:0 auto; border-bottom:1px solid #0d0d0d; font-size:14px; text-align: center; height:62px; line-height:62px;}
+.buyplay_fixed .bill_tit{ color:#999; margin-right:20px;}
+.buyplay_fixed .price{ color:#fff; margin-right:8px;}
+.buyplay_fixed .credit{ margin-left:27px; color:#fff;}
+.buyplay_fixed .list{  width:478px; margin:0 auto; padding-top:37px; border-top:1px solid #404040;}
+.buyplay_fixed .list ul{ overflow: hidden; margin-left: 15px; text-align: center;}
+.buyplay_fixed .list li{ float: left; cursor:pointer; width:141px; border-radius:3px; height:53px; border:1px solid #23aa37; margin-right:12px;}
+.buyplay_fixed .list li.active{ background:#23aa37;}
+.buyplay_fixed .list li:last-child{ margin:0;}
+.buyplay_fixed .list h2{ width:130px; border-bottom:1px solid #0b0b0b;  margin:0 auto;height:28px; line-height:28px; font-size:14px; color:#fff; text-align: center;}
+.buyplay_fixed .list del{ float: left;font-size:14px;  line-height:26px;color:#fff; }
+.buyplay_fixed .list span{ font-size:14px;  line-height:26px;color:#fff; float: right;}
+.buyplay_fixed .price_num{text-align: center;width:130px; font-size:14px;line-height:26px; color:#fff;  margin:0 auto; overflow: hidden; border-top:1px solid #343434;}
+.buyplay_fixed .svip_info{  padding-top:35px; text-align: center;  font-size:14px; line-height:18px;}
+.buyplay_fixed .svip_icon{ margin-right:24px; color:#fff; display: inline-block; padding-left:44px; background:url(../images/ichy_60.png) no-repeat left center;}
+.buyplay_fixed .go_price{color:#23aa37;}
+.buyplay_fixed .active .price_num{ border-top:1px solid #3abe4e; text-align: center;}
+.buyplay_fixed .active h2{ border-bottom:1px solid #108822;}
+.buyplay_fixed .list li:hover{ background:#23aa37;}
+.buyplay_fixed .list li:hover h2{ border-bottom:1px solid #108822;}
+.buyplay_fixed .list li:hover .price_num{ border-top:1px solid #3abe4e;}
+.buyplay_fixed .close_btn{ width:16px; height:15px; background:url(../images/ichy_55.png) no-repeat 0 0; background-size:16px auto;position:absolute; top:1px; right:16px;}
+.buyplay_fixed .no_glod{ width:478px; margin:0 auto;border-top:1px solid #404040; overflow: hidden;}
+.buyplay_fixed .please_go{ height:100px; line-height:100px; text-align: center; color:#fff;}
+.buyplay_fixed .gobill{ width:125px; height:38px; line-height:38px; color:#23aa37; border:1px solid #23aa37; border-radius:3px; text-align: center; float: left; margin:0 60px 0 82px;}
+.buyplay_fixed .exit{ width:125px; height:38px; line-height:38px; color:#23aa37; border:1px solid #23aa37; border-radius:3px; text-align: center; float: left;}
+.buyplay_fixed .exit_only{width:125px; height:38px; margin: 0 auto; line-height:38px; color:#23aa37; border:1px solid #23aa37; border-radius:3px; text-align: center;  margin:0 auto; display: block;}
+.buyplay_fixed .svip_text{ margin-right:24px; color:#fff; display: inline-block; padding-left:44px; }
+.buyplay_fixed .trade{width:478px; margin:0 auto; padding-top:40px; border-top:1px solid #404040;}
+.buyplay_fixed .trade ul{ width:332px; height:82px; border:1px solid #23aa37; margin:0 auto;}
+.buyplay_fixed .trade li{ font-size:14px; color:#fff; text-align: center; width:324px; height:40px; line-height:40px;margin:0 auto;}
+.buyplay_fixed .trade li:first-child{ border-bottom:1px solid #0b0b0b;}
+.buyplay_fixed .trade li:last-child{ border-top:1px solid #343434;}
+
+
+/*存档市场*/
+.archive_fixed{ width:751px; height:284px; background:#2a2a2a; border:1px solid #4a4a4a; position: fixed; top:50%; left:50%; margin:-220px 0 0 -416px; z-index: 10000}
+.archive_fixed .tab_nav{ overflow: hidden; border-bottom:1px solid #4a4a4a;}
+.archive_fixed .tab_nav li{ cursor:pointer; background:url(../images/ichy_62.png) no-repeat 0 0; background-size:100% auto; float:left; font-size:14px; color:#fff; width:416px; height:40px; line-height:40px; text-align: center;}
+.archive_fixed .tab_nav li:nth-child(1){ border-right:1px solid #4a4a4a}
+.archive_fixed .tab_nav li.active{  background:url(../images/ichy_.png) no-repeat 0 0; background-size:100% auto;}
+.archive_fixed .pic_text li{ border-bottom:1px dashed #4a4a4a; padding:24px 22px; overflow: hidden;}
+.archive_fixed .imagebg{ float: left; margin-right:17px; width:240px; height:107px; background:url(../images/ichy_63.png) no-repeat 0 0; background-size:240px auto;}
+.archive_fixed .mark{ width:180px; font-size:14px; line-height:18px; color:#fff; padding:20px 0 0 38px;}
+.archive_fixed .glod_box{ font-size:14px; color:#23aa37; height:30px; line-height:30px;  width:180px; padding:6px 0px 0px 38px; overflow: hidden;}
+.archive_fixed .g_glod{ float: left;}
+.archive_fixed .cloud_glod{ float: right;}
+.archive_fixed .text{ float: left; width:530px;}
+.archive_fixed .title{ font-size:14px; color:#fff; line-height:34px; padding-top:9px;}
+.archive_fixed .bref{ font-size:14px; color:#999; line-height:18px;}
+.archive_fixed .info_list{ padding:12px 0 0 22px;}
+.archive_fixed .info_list p{font-size:14px; line-height:22px; color:#999;}
+.archive_fixed .close_btn{ width:16px; height:15px; background:url(../images/ichy_55.png) no-repeat 0 0; background-size:16px auto;position:absolute; top:1px; right:16px;}
+
+
+
+/*会员页弹窗1*/
+.member_fixed{ width:488px; height:258px; border:1px solid #4a4a4a; background:#2a2a2a; position:fixed; top:50%; left:50%; margin:-129px 0 0 -244px;z-index: 10000;}
+.member_fixed .close_btn{ width:16px; height:15px; background:url(../images/ichy_55.png) no-repeat 0 0; background-size:16px auto;position:absolute; top:1px; right:16px;}
+.member_fixed .title{ font-size:14px; line-height:174px; text-align: center; color:#fff;}
+.member_fixed .btn{ overflow: hidden; text-align: center;}
+.member_fixed .sure_btn{ display: inline-block; margin:0 35px; border-radius:3px; width:112px; height:38px; font-size:14px; color:#23aa37; line-height:38px; text-align: center; border:0.8px solid #23aa37;}
+.member_fixed .cancel_btn{ display: inline-block; margin:0 35px; border-radius:3px; width:112px; height:38px; font-size:14px; color:#23aa37; line-height:38px; text-align: center;border:0.8px solid #23aa37;}
+.member_fixed .sure_btn:hover,.member_fixed .cancel_btn:hover{ background:#23aa37; color:#fff}
+
+.member_fixed .close_btn{ width:16px; height:15px; background:url(../images/ichy_55.png) no-repeat 0 0; background-size:16px auto;position:absolute; top:1px; right:16px;}
+
+
+/*设备管理弹窗*/
+.devicemge_fixed{ width:488px; height:258px;border:1px solid #4a4a4a; background:#2a2a2a;position:fixed; top:50%; left:50%; margin:-129px 0 0 -244px; z-index: 10000;}
+.devicemge_fixed .th_td{ font-size:14px; text-align: center; line-height:40px; color:#fff; height:40px; background:#232323; border-bottom:1px solid #1c1c1c;}
+.devicemge_fixed .title{ font-size:14px; line-height:20px; color:#fff; padding-top:45px; padding-bottom:50px; text-align: center;}
+.devicemge_fixed .btn{ clear:both;text-align: center;}
+.devicemge_fixed .sure_btn{ display: inline-block; margin:0 35px; border-radius:3px; width:112px; height:38px; font-size:14px; color:#23aa37; line-height:38px; text-align: center; border:0.08px solid #23aa37;}
+.devicemge_fixed .cancel_btn{ display: inline-block; margin:0 35px; border-radius:3px; width:112px; height:38px; font-size:14px; color:#23aa37; line-height:38px; text-align: center;border:0.08px solid #23aa37;}
+
+.devicemge_fixed .cancel_btn:hover,.devicemge_fixed .sure_btn:hover{background:#23aa37; color:#fff}
+
+.devicemge_fixed .close_btn{ width:16px; height:15px; background:url(../images/ichy_55.png) no-repeat 0 0; background-size:16px auto;position:absolute; top:1px; right:16px;}
+.devicemge_fixed .update { padding-left:90px; padding:37px 0 29px 90px;}
+.devicemge_fixed .update input{ width:292px; height:38px; line-height:38px; font-size:14px; color:#9c9c9c; background:#2a2a2a; border:1px solid #4a4a4a; padding-left:10px;}
+.devicemge_fixed .update h2{font-size:14px; line-height:29px; color:#ff190e;}
+
+
+/*账号弹窗 账号-绑定手机-*/
+.bindtel_fixed{ width:488px; height:322px;border:1px solid #4a4a4a; background:#2a2a2a;position:fixed; top:50%; left:50%; margin:-161px 0 0 -244px;z-index: 10000;}
+.bindtel_fixed .th_td{ font-size:14px; text-align: center; line-height:40px; color:#fff; height:40px; background:#232323; border-bottom:1px solid #1c1c1c;}
+.bindtel_fixed ul{ padding:32px 0 0 87px;}
+.bindtel_fixed li{ overflow: hidden;}
+.bindtel_fixed .text{ height:38px; line-height:38px; width:292px;padding-left:20px; color:#5b5b5b; background:#2a2a2a; border:1px solid #000;}
+.bindtel_fixed .info{ height:50px; line-height:50px;font-size:14px;color:#ff190e; padding-left:10px;}
+.bindtel_fixed .password{ float: left; margin-right:22px; width:150px; float:left;height:38px; line-height:38px;padding:0 0 0 20px; color:#5b5b5b; background:#2a2a2a; border:1px solid #000; }
+.bindtel_fixed .send_btn{ float: left; border-radius:3px; width:120px;height:38px; line-height:38px; text-align: center; color:#25943a;  border:1px solid #25943a;}
+.bindtel_fixed .bind_btn{ width:314px; display: block; margin:33px auto 0; border-radius:3px; height:40px; line-height:40px; text-align: center; font-size:14px; color:#fff; background:#25943a}
+.bindtel_fixed .close_btn{ width:16px; height:15px; background:url(../images/ichy_55.png) no-repeat 0 0; background-size:16px auto;position:absolute; top:1px; right:16px;}
+
+/*账号弹窗 更改资料1*/
+.updata_fixed{ width:624px; height: 548px; padding-bottom:21px; border:1px solid #4a4a4a; background:#2a2a2a;
+	position:absolute; top:50%; left:50%; margin: -281px 0px 0px -312px; z-index: 10001;}
+.updata_fixed .th_td{ font-size:20px; text-align: center; line-height:56px; color:#fff; height:56px;background:#232323; border-bottom:1px solid #1c1c1c;}
+.updata_fixed .th_bd{ padding:28px 0 0 33px;}
+.updata_fixed dl{ overflow: hidden; margin-bottom: 12px;}
+.updata_fixed dt{ font-size:20px; line-height:60px; color:#888; float: left; width:70px;}
+.updata_fixed dd{ float: left;width:477px;}
+.updata_fixed .text{ width:455px; line-height:56px;border:1px solid #4a4a4a; padding-left:14px; background:#2a2a2a; font-size:20px;color:#fff}
+.updata_fixed label{ cursor: pointer; float: left;  height:56px;line-height:56px;font-size:20px; color:#fff; margin-right:62px;} 
+.updata_fixed label input{ border:none; float: left; margin:16px 8px 0 0; width:21px; height:21px; 
+	background:url(images/personalInfo/ichy_65.png) no-repeat 0 0; background-size:18px;}
+/*updata_fixed label input{background: url(../../images/personalInfo/ichy_65.png) ;}*/
+.updata_fixed label input:checked{ background:url(../images/personalInfo/ichy_64.png) no-repeat 0 0;background-size:18px;}
+.updata_fixed select{font-size:20px; border:1px solid #4a4a4a; margin-right:16px; color:#9c9c9c; background:#2a2a2a url(../images/personalInfo/ichy_67.png) no-repeat 80px center;
+	width:146px; height:53px; line-height:53px; padding-left:14px; position:relative; float: left;-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;appearance:none; }
+.updata_fixed select:last-child{ margin:0;}
+.updata_fixed select:focus{ border:1px solid #23aa37; color:#fff; font-size:20px;;}
+.updata_fixed option{ height:36px; line-height:36px;-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;appearance:none; }
+.updata_fixed textarea{ width:455px; padding:7px; background:#2a2a2a; float: left;height:123px;font-size:20px;  line-height:28px; color:#9c9c9c; border:1px solid #4a4a4a;}
+.updata_fixed .info{ font-size:20px; color:#9c9c9c; padding-left:10px;background:url(../..images/personalInfo/ichy_66.png) no-repeat left 12px; background-size:23px; clear: both;  line-height:25px; padding-top:16px;}
+.updata_fixed .info img{width: 25px; height: 25px; margin-right: 10px;}
+.updata_fixed .btn{ text-align: center;}
+.updata_fixed .btn a{border-radius:5.5px;font-size:20px; margin:0 44px; display: inline-block; width:163px; height:42px; line-height:42px; text-align: center; border:1px solid #25943a; color:#25943a;}
+.updata_fixed .btn a:hover{ background:#25943a; color:#fff}
+
+.updata_fixed .close_btn{ width:22px; height:21px; background:url(../images/ichy_55.png) no-repeat 0 0; background-size:22px auto;position:absolute; top:14px; right:22px;}
+.updata_fixed .open_vip{ float: left; width:140px; height:38px;  line-height:38px; text-align: center;  font-size:14px; color:#23aa37; border:1px solid #23aa37;}
+.updata_fixed .username{ float: left;width:155px; height:36px; padding-left:10px; color:#9c9c9c; margin-right:10px; border:none; background:none;font-size:14px;}
+
+
+/*账号弹窗 更换头像*/
+.upface_fixed{ font-size:14px; width:833px;  padding-bottom:15px; border:1px solid #4a4a4a; background:#2a2a2a;position:fixed; top:50%; left:50%; margin:-230px 0 0 -416px; z-index: 10000;}
+.upface_fixed .th_td{ font-size:14px; text-align: center; line-height:40px;color:#fff; height:40px;background:#232323; border-bottom:1px solid #1c1c1c;}
+.upface_fixed .th_bd{ padding:20px 0 0 24px;}
+.upface_fixed .close_btn{ width:16px; height:15px; background:url(../images/personalInfo/ichy_55.png) no-repeat 0 0; background-size:16px auto;position:absolute; top:1px; right:16px;}
+.upface_fixed .th_bd{background:#2a2a2a}
+.upface_fixed .face_click{ text-align: center;}
+.upface_fixed .face_click .btn{ border:1px solid #23aa37; text-align: left; color:#23aa37; width:96px; padding-left:50px; background:url(../images/ichy_18.jpg) no-repeat 14px center; height:38px; line-height:38px; display:inline-block;border-radius:4px;}
+
+.face_click #fileInput{ position:absolute; background:red; left:40%;height:40px; opacity:0; z-index:10}
+
+.upface_fixed .face_list{ padding-top:23px; width:742px; margin:0 auto; overflow: hidden;}
+.upface_fixed .face_list li{ margin:0 10px; float: left; position:relative;}
+.upface_fixed .face_list img{ width:80px; border:3px solid #feda35; margin-bottom:20px; border-radius:50%}
+.upface_fixed li .right_icon{ display: none;}
+.upface_fixed li.active .right_icon{ position:absolute; left:0; top:0; width:086px; height:86px;  border-radius:50%; background:rgba(0,0,0,0.61) url(../images/ichy_68.png) no-repeat center center; background-size:29px auto; display: block;}
+.upface_fixed .submit{ text-align: center; padding-bottom:18px;}
+.upface_fixed .sure_icon{border-radius:4px; border-radius:3px; width:83px; height:40px;display: inline-block; line-height:40px;color:#23aa37;text-align: center; border:0.08px solid #23aa37 }
+.upface_fixed .sure_icon:hover{ color:#fff; background:#23aa37}
+
+/*账号弹窗 设置密保问题 */
+input{ font-size:14px}
+.setqus_fixed{ font-size:14px; width:448px; margin:-200px 0 0 -162px; padding-bottom:15px; border:1px solid #4a4a4a; background:#2a2a2a;position:fixed; top:50%; left:50%;z-index: 10000;}
+.setqus_fixed .th_td{ font-size:14px; text-align: center; line-height:40px;color:#fff; height:40px;background:#232323; border-bottom:1px solid #1c1c1c;}
+.setqus_fixed .th_bd{ padding:33px 0 29px;}
+.setqus_fixed .close_btn{ width:16px; height:15px; background:url(../images/ichy_55.png) no-repeat 0 0; background-size:16px auto;position:absolute; top:1px; right:16px;}
+.setqus_fixed .select_qus{ display: block;  margin-left:80px;border:1px solid #4a4a4a;font-size:14px;color:#9c9c9c; background:#2a2a2a url(../images/ichy_67.png) no-repeat 270px center; width:297px; height:36px; line-height:36px; padding-left:14px; position:relative;-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;appearance:none; }
+.setqus_fixed .ans{display: block;  margin-left:80px;border:1px solid #4a4a4a;font-size:14px;color:#9c9c9c; background:#2a2a2a; width:283px; height:36px; line-height:36px; padding-left:14px;}
+.setqus_fixed li{ margin-bottom:14px; text-align: center;}
+.setqus_fixed .info{ display: inline-block; color:#9c9c9c;padding-left:24px; line-height:40px;background:url(../images/ichy_66.png) no-repeat left center; background-size:17px;}
+.setqus_fixed .btn{ text-align: center;}
+.setqus_fixed .sure_btn{border-radius:4px;width:314px; height:40px;line-height:40px;background:#25943a; color:#fff; display: inline-block;}
+.setqus_fixed .sure_btn:hover{ color:#fff; background:#23aa37}
+
+/*账号弹窗 更换头像 */
+.sltface_fixed{ font-size:14px; width:466px; height:300px; margin:-153px 0 0 -233px;  border:1px solid #4a4a4a; background:#2a2a2a;position:fixed; top:50%; left:50%; z-index: 10000;}
+.sltface_fixed > img{ position:absolute; top:24px; right:30px }
+.sltface_fixed .images_box{ padding-top:24px; width:220px; height:200px; margin-left:5px}
+.sltface_fixed .btn{ text-align: center; padding-top:18px; clear:both}
+.sltface_fixed .sure_btn{border-radius:4px; display: inline-block; margin:0 27px; border-radius:3px; width:114px; height:38px; font-size:14px; color:#23aa37; line-height:38px; text-align: center; border:0.08px solid #23aa37;}
+.sltface_fixed .cancel_btn{ display: inline-block; margin:0 0.27em; border-radius:3px; width:114px;height:38px; font-size:14px; color:#23aa37; line-height:38px; text-align: center; border:0.08px solid #23aa37;}
+.sltface_fixed .sure_btn:hover,.sltface_fixed .cancel_btn:hover{ color:#fff; background:#23aa37}
+
+
+/*账号弹窗 验证绑定邮箱*/
+.isemail_fixed{ font-size:14px; width:488px; height:323px; margin:-162px 0 0 -244px; border:1px solid #4a4a4a; background:#2a2a2a;position:fixed; top:50%; left:50%;z-index: 10000;}
+.isemail_fixed .th_td{ font-size:14px; text-align: center; line-height:40px;color:#fff; height:40px;background:#232323; border-bottom:1px solid #1c1c1c;}
+.isemail_fixed .close_btn{ width:16px; height:15px; background:url(../images/ichy_55.png) no-repeat 0 0; background-size:16px auto;position:absolute; top:1px; right:16px;}
+.isemail_fixed ul{padding:32px 0 0 100px;}
+.isemail_fixed li{ margin-bottom:38px; overflow: hidden;}
+.isemail_fixed .text{ width:300px; height:36px; padding-left:10px; line-height:36px; color:#fff; background:none; border:1px solid #4a4a4a; }
+.isemail_fixed .password{ float: left; width:154px; margin-right:23px; height:36px; padding-left:10px; line-height:36px; color:#fff; background:none; border:1px solid #4a4a4a; }
+.isemail_fixed .send_btn{ float: left; width:120px; height:34px; text-align: center; border:0.08px solid #25943a; line-height:34px; color:#25943a;  }
+.isemail_fixed .btn{ text-align: center; padding-top:6px;}
+.isemail_fixed .prev_btn{border-radius:4px; display: inline-block; margin:0 40px; border-radius:3px; width:127px; height:38px; font-size:14px; color:#23aa37; line-height:38px; text-align: center; border:0.08px solid #23aa37;}
+.isemail_fixed .next_btn{ border-radius:4px;display: inline-block; margin:0 40px; border-radius:3px; width:127px;height:38px; font-size:14px; color:#23aa37; line-height:38px; text-align: center; border:0.08px solid #23aa37;}
+.isemail_fixed .next_btn:hover,.isemail_fixed .prev_btn:hover{ color:#fff; background:#23aa37}
+
+/*账号弹窗 验证方式*/
+.checktype_fixed{ font-size:14px; width:524px; height:266px; margin:-133px 0 0 -262px; border:1px solid #4a4a4a; background:#2a2a2a;position:fixed; top:50%; left:50%;z-index: 10000;}
+.checktype_fixed .th_td{ font-size:14px; text-align: center; line-height:40px;color:#fff; height:40px;background:#232323; border-bottom:1px solid #1c1c1c;}
+.checktype_fixed .close_btn{ width:16px; height:15px; background:url(../images/ichy_55.png) no-repeat 0 0; background-size:16px auto;position:absolute; top:1px; right:16px;}
+.checktype_fixed .title{ font-size:14px; margin-bottom:6px; text-align: center; color:#fff; line-height:60px;}
+.checktype_fixed ul{ padding-left:18px; overflow: hidden;}
+.checktype_fixed li{ float: left; margin:0 6px; overflow:hidden;}
+.checktype_fixed p {display: none;}
+.checktype_fixed li a{ position:relative; border:1px solid #4a4a4a; padding-left:47px; height:56px; width:100px; line-height:56px; color:#888; float: left;}
+.checktype_fixed .off .check_tel{ background:url(../images/ichy_71_0.png) no-repeat 14px center; background-size:22px auto;}
+.checktype_fixed .off.check_email{ background:url(../images/ichy_72_0.png) no-repeat 7px center; background-size:31px auto;}
+.checktype_fixed .off .check_lock{ background:url(../images/ichy_73_0.png) no-repeat 14px center; background-size:22px auto;}
+.checktype_fixed .off p {display: block;}
+.checktype_fixed .check_tel{ background:url(../images/ichy_71.png) no-repeat 14px center; background-size:22px auto;}
+.checktype_fixed .check_email{ background:url(../images/ichy_72.png) no-repeat 7px center; background-size:31px auto;}
+.checktype_fixed .check_lock{ background:url(../images/ichy_73.png) no-repeat 14px center; background-size:22px auto;}
+
+.checktype_fixed .active .check_tel{ background:url(../images/ichy_71.png) no-repeat 14px center; background-size:22px auto;}
+.checktype_fixed .active .check_email{ background:url(../images/ichy_72.png) no-repeat 7px center; background-size:31px auto;}
+.checktype_fixed .active .check_lock{ background:url(../images/ichy_73.png) no-repeat 14px center; background-size:22px auto;}
+
+.checktype_fixed li .mark{ display: none;}
+.checktype_fixed .active{ border:1px solid #23aa37;  height:56px;position:relative;}
+.checktype_fixed .active p{ display:none}
+
+.checktype_fixed .active .mark{ position: absolute; top:0; right:0; width:23px; height:22px; background:url(../images/ichy_74.png) no-repeat 0 0; background-size:23px auto; display: block;}
+.checktype_fixed .active.on .mark{ position: absolute; top:0; right:0; width:23px; height:22px;display: block;}
+.checktype_fixed .btn{border-radius:4px; text-align: center; padding-top:6px;}
+.checktype_fixed p{ line-height:28px; color:#888; text-align: center;}
+.checktype_fixed .next_btn{ display:inline-block; width:116px; height:38px; line-height:38px; text-align: center; color:#23aa37; border:1px solid #23aa37; margin-top:1px; border-radius:4px}
+.checktype_fixed .next_btn:hover{ color:#fff; background:#23aa37}
+
+
+
+/*账号弹窗 验证密保问题*/
+.checkques_fixed{ font-size:14px; width:488px; height:323px; margin:-133px 0 0 -262px; border:1px solid #4a4a4a; background:#2a2a2a;position:fixed; top:50%; left:50%;z-index: 10000;}
+.checkques_fixed .th_td{ font-size:14px; text-align: center; line-height:40px;color:#fff; height:40px;background:#232323; border-bottom:1px solid #1c1c1c;}
+.checkques_fixed .close_btn{ width:16px; height:15px; background:url(../images/ichy_55.png) no-repeat 0 0; background-size:16px auto;position:absolute; top:1px; right:16px;}
+.checkques_fixed .title{ font-size:14px; color:#888; text-align: center; line-height:58px; padding-top:24px;}
+.checkques_fixed .ques{ color:#fff;}
+.checkques_fixed .input_box{ margin-left:100px;}
+.checkques_fixed .text_input{ width:298px; height:36px; line-height:36px; padding-left:15px; border:1px solid #4a4a4a; color:#888; background:#2a2a2a;}
+.checkques_fixed .info{ color:#ff190e; line-height:29px; padding-left:3px;}
+.checkques_fixed .btn{ text-align: center; padding-top:44px}
+.checkques_fixed .prev_btn{ border-radius:4px;display: inline-block; margin:0 40px; border-radius:3px; width:127px; height:38px; font-size:14px; color:#23aa37; line-height:38px; text-align: center; border:0.08px solid #23aa37;}
+.checkques_fixed .next_btn{border-radius:4px; display: inline-block; margin:0 40px; border-radius:3px; width:127px;height:38px; font-size:14px; color:#23aa37; line-height:38px; text-align: center; border:0.08px solid #23aa37;}
+.checkques_fixed .next_btn:hover,.checkques_fixed .prev_btn:hover{ color:#fff; background:#23aa37}
